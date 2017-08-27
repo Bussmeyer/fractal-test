@@ -1,0 +1,18 @@
+<div class="text{{#if isCentered}} text--centered{{/if}}{{#if isDark}} text--dark p-module--has-bg{{else}} p-module--has-no-bg{{/if}}"{{#if identifier}} id="{{identifier}}"{{/if}}>
+    <div class="page__module-wrapper">
+        <div class="page__module-wrapper-inner">
+            {{#if headline}}
+                <h2 id="{{headline.id}}" class="text__headline">{{headline.text}}</h2>
+            {{/if}}
+            <div class="text__body">
+
+                {{#if figure}}
+                    <div class="text__picture{{#if figure.right}} text__picture--right{{/if}}">
+                        {{{include this path="figure" resourceType="modules/image/figure"}}}
+                    </div>
+                {{/if}}
+                {{{text}}}
+            </div>
+        </div>
+    </div>
+</div>

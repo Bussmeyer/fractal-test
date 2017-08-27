@@ -1,0 +1,22 @@
+<picture class="image__picture{{#if authorMode}} cq-dd-picture{{/if}}">
+    {{~#each sources ~}}
+        <source {{#if ../lazy}}data-{{/if}}srcset="
+        {{~#each srcsets ~}}
+            {{~src}}{{#if width}} {{width}}w{{/if ~}}
+            {{~#if resolution}} {{resolution}}{{/if ~}}
+            {{#unless @last}}, {{/unless}}
+        {{~/each~}}"
+            {{~#if media}} media="{{media}}"{{/if ~}}
+            {{~#if sizes}} sizes="{{sizes}}" {{/if}}/>
+    {{~/each~}}
+    <img class="image__img
+        {{#unless autoWidth}} image__img--full-width{{/unless}}
+        {{~#if lazy}} lazyload{{/if}}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        {{~#if lazy}} data-sizes="auto" data-srcset="{{src}}" {{else}} srcset="{{src}}" {{/if ~}}
+         alt="{{alt}}" height="{{height}}" width="{{width}}" />
+    {{~#if lazy}}
+        <noscript>
+            <img class="image__img{{#unless autoWidth}} image__img--full-width{{/unless}}" src="{{src}}" alt="{{alt}}" height="{{height}}" width="{{width}}" />
+        </noscript>
+    {{/if}}
+</picture>

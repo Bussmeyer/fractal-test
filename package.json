@@ -1,0 +1,10 @@
+{
+  "name": "fractal-test",
+  "version": "0.1.0",
+  "author": "Thomas Bußmeyer",
+  "description": "A test install of fractal. Use it for reference and fun.",
+  "main": "./fractal.js",
+  "dependencies": {
+    "@frctl/fractal": "^1.1.5"
+  }
+}

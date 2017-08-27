@@ -1,0 +1,26 @@
+<div class="hero{{#if startPage}} hero--start-page{{/if}} js-clickable">
+    <div class="hero__background">
+    </div>
+    <div class="page__module-wrapper">
+        <div class="hero__wrapper page__module-wrapper-inner">
+            <div class="hero__body">
+                {{#if button}}
+                    <section class="hero__text js-clickable__trigger">
+                        <h1 class="hero__headline p-h1" id="{{headline.id}}">
+                            {{headline.text}}
+                        </h1>
+                        <p class="hero__link-wrapper">
+                            <a class="hero__link p-internal-link js-clickable__target" href="{{button.href}}"
+                                {{#if title}} title="{{button.title}}"{{/if}}>
+                                <svg class="hero__icon icon p-internal-link__icon">
+                                    <use xlink:href="#arrow-small-right"/>
+                                </svg>
+                                {{button.text}}
+                            </a>
+                        </p>
+                    </section>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
