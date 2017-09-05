@@ -4,7 +4,13 @@
   "author": "Thomas Bußmeyer",
   "description": "A test install of fractal. Use it for reference and fun.",
   "main": "./fractal.js",
+  "repository": "https://github.com/Bussmeyer/fractal-test",
   "dependencies": {
     "@frctl/fractal": "^1.1.5"
+  },
+  "scripts": {
+    "start": "fractal start --sync",
+    "build": "fractal build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

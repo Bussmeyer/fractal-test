@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+        {{#if title}}
+            {{title}}
+        {{else}}
+            Base
+            <Page></Page>
+        {{/if}}
+    </title>
+</head>
+<body>
+    {{> @partial-block }}
+</body>
+</html>
